@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Intro from './components/Intro';
 import Features from './components/Features';
+import Services from './components/Services';
 
 const Container = styled.div`
    height: 100vh;
@@ -13,7 +14,7 @@ const Container = styled.div`
 `
 const IntroShape = styled.div`
    clip-path: polygon(67% 0, 100% 0%, 100% 100%, 55% 100%);
-   background-color: #063970;
+   background-color: #ffffd4;
    position: absolute;
    top: 0;
    left: 0;
@@ -22,8 +23,18 @@ const IntroShape = styled.div`
    z-index: -1;
 `
 const FeatureShape = styled.div`
-   clip-path: polygon(0% 0, 55% 0%, 33% 100%, 0% 100%);
+   clip-path: polygon(0% 0, 55% 0%, 45% 100%, 0% 100%);
    background-color: #b9faf6;
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+`
+const ServicesShape = styled.div`
+   clip-path: polygon(0% 0, 45% 0%, 45% 100%, 0% 100%);
+   background-color: #ffddd4;
    position: absolute;
    top: 0;
    left: 0;
@@ -44,6 +55,10 @@ function App() {
     <Container>
        <Features/>
        <FeatureShape/>
+    </Container>
+    <Container>
+       <Services/>
+       <ServicesShape/>
     </Container>
     </>
   );
